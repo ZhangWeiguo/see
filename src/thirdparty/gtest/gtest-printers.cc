@@ -41,15 +41,15 @@
 // or void PrintTo(const Foo&, ::std::ostream*) in the namespace that
 // defines Foo.
 
-#include "thirdparty/gtest/gtest-printers.h"
+#include "gtest/gtest-printers.h"
 #include <stdio.h>
 #include <cctype>
 #include <cstdint>
 #include <cwchar>
 #include <ostream>  // NOLINT
 #include <string>
-#include "thirdparty/gtest/internal/gtest-port.h"
-#include "thirdparty/gtest/gtest-internal-inl.h"
+#include "gtest/internal/gtest-port.h"
+#include "gtest/gtest-internal-inl.h"
 
 namespace testing {
 

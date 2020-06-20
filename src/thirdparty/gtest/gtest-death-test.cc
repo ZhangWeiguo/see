@@ -30,12 +30,12 @@
 //
 // This file implements death tests.
 
-#include "thirdparty/gtest/gtest-death-test.h"
+#include "gtest/gtest-death-test.h"
 
 #include <utility>
 
-#include "thirdparty/gtest/internal/gtest-port.h"
-#include "thirdparty/gtest/internal/custom/gtest.h"
+#include "gtest/internal/gtest-port.h"
+#include "gtest/internal/custom/gtest.h"
 
 #if GTEST_HAS_DEATH_TEST
 
@@ -80,9 +80,9 @@
 
 #endif  // GTEST_HAS_DEATH_TEST
 
-#include "thirdparty/gtest/gtest-message.h"
-#include "thirdparty/gtest/internal/gtest-string.h"
-#include "thirdparty/src/gtest-internal-inl.h"
+#include "gtest/gtest-message.h"
+#include "gtest/internal/gtest-string.h"
+#include "src/gtest-internal-inl.h"
 
 namespace testing {
 
