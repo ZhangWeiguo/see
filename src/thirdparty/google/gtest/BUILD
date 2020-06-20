@@ -1,9 +1,11 @@
 cc_library(
     name = 'gtest',
-    srcs = 'gtest.cc',
+    prebuilt = True,
+    deps = ['#pthread']
 )
 
 cc_library(
     name = 'gtest_main',
-    srcs = 'gtest_main.cc',
+    prebuilt = True,
+    deps = ['#pthread']
 )

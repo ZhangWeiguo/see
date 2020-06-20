@@ -118,5 +118,6 @@ git clone https://gitee.com/zhangweiguo717/googletest.git
 git clone https://gitee.com/zhangweiguo717/gflags.git
 sudo apt-get install libtool
 sudo apt-get install autoconf
-cd glog && ./autogen.sh && ./configure && make
+sudo apt-get install ninja
+git config --global core.autocrlf false
 ```
