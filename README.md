@@ -129,11 +129,10 @@
     LIBRARY_PATH
     LD_LIBRARY_PATH
 
-4. 配置RPC
-    cd ${WORK_SPACE}/src
-    cd protobuf && ./autogen.sh
-    ./configure
-
+4. 配置protobuf && RPC
+    cd ${WORK_SPACE}/src/thirdparty
+    cd protobuf && ./autogen.sh && ./configure && make -j 8
+    cd grpc && cmake . && git submodule update --init
 5. 其他
     git config --global core.autocrlf false
 
