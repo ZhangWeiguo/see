@@ -110,14 +110,31 @@
 
 #### 环境搭建
 ```
-WORK_SPACE=/mnt/d/Code/see/src/
-cd ${WORK_SPACE}
-cd thirdparty
-git clone https://gitee.com/zhangweiguo717/glog.git
-git clone https://gitee.com/zhangweiguo717/googletest.git
-git clone https://gitee.com/zhangweiguo717/gflags.git
-sudo apt-get install libtool
-sudo apt-get install autoconf
-sudo apt-get install ninja
-git config --global core.autocrlf false
+1. 下载该仓库
+    WORK_SPACE=/mnt/d/Code/see
+    cd ${WORK_SPACE}
+    git clone git@github.com:ZhangWeiguo/see.git
+
+2. 安装Blade
+    WORK_SPACE=/mnt/d/Code/see
+    cd ${WORK_SPACE}/src
+    sudo apt-get install libtool
+    sudo apt-get install autoconf
+    sudo apt-get install ninja
+    cd blade-build && ./install
+
+3. 配置bashprofile
+    C_INCLUDE_PATH
+    CPLUS_INCLUDE_PATH
+    LIBRARY_PATH
+    LD_LIBRARY_PATH
+
+4. 配置RPC
+    cd ${WORK_SPACE}/src
+    cd protobuf && ./autogen.sh
+    ./configure
+
+5. 其他
+    git config --global core.autocrlf false
+
 ```
