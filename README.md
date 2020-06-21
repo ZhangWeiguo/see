@@ -123,11 +123,15 @@
     sudo apt-get install ninja
     cd blade-build && ./install
 
-2.1 安装Bazel
+2.1 安装Bazel(最终选用3.3.0)
     WORK_SPACE=/mnt/d/Code/see
     cd ${WORK_SPACE}/src/bazel
     wget https://github.strcpy.cn/bazelbuild/bazel/releases/download/0.27.1/bazel-0.27.1-installer-linux-x86_64.sh
-    bash bazel-0.27.1-installer-linux-x86_64.sh
+    wget https://github.strcpy.cn/bazelbuild/bazel/releases/download/3.3.0/bazel-3.3.0-installer-linux-x86_64.sh
+    wget wget https://github.strcpy.cn/bazelbuild/bazel/releases/download/0.27.1/bazel-0.27.1-dist.zip
+    安装JDK11 sudp apt-get install openjdk-11-jdk
+    bash bazel-3.3.0-installer-linux-x86_64.sh --user
+
 
 3. 配置bashprofile/bashrc/profile
     C_INCLUDE_PATH

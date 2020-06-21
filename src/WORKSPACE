@@ -1,0 +1,51 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+local_repository(
+  name = "com_google_protobuf",
+  path = "thirdparty/grpc/third_party/protobuf",
+)
+
+local_repository(
+  name = "rules_cc",
+  path = "bazel/rules_cc",
+)
+
+local_repository(
+  name = "rules_proto",
+  path = "bazel/rules_proto",
+)
+
+local_repository(
+  name = "rules_java",
+  path = "bazel/rules_java",
+)
+
+local_repository(
+  name = "bazel_skylib",
+  path = "bazel/bazel_skylib",
+)
+
+local_repository(
+  name = "com_github_grpc_grpc",
+  path = "thirdparty/grpc",
+)
+
+local_repository(
+  name = "build_bazel_rules_apple",
+  path = "bazel/rules_apple",
+)
+
+load("@rules_cc//cc:repositories.bzl", "rules_cc_dependencies")
+rules_cc_dependencies()
+
+load("@rules_java//java:repositories.bzl", "rules_java_dependencies", "rules_java_toolchains")
+rules_java_dependencies()
+rules_java_toolchains()
+
+load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
+rules_proto_dependencies()
+rules_proto_toolchains()
+
+load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
+bazel_skylib_workspace()
+
