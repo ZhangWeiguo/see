@@ -621,7 +621,7 @@ public:
 
 
 // Import gflags library symbols into alternative/deprecated namespace(s)
-#include "gflags_gflags.h"
+#include "thirdparty/gflags/gflags_gflags.h"
 
 
 #endif  // GFLAGS_GFLAGS_H_

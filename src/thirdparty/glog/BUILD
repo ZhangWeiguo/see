@@ -1,5 +1,7 @@
 cc_library(
-    name = 'glog',
-    prebuilt = True,
-    deps = ['#pthread']
+    name = "glog",
+    srcs = ["lib64/libglog.a"],
+    hdrs = ["logging.h"],
+    linkopts = ["-pthread"],
+    visibility = ["//visibility:public"],
 )

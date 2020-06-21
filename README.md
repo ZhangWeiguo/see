@@ -115,7 +115,7 @@
     cd ${WORK_SPACE}
     git clone git@github.com:ZhangWeiguo/see.git
 
-2. 安装Blade
+2.0 安装Blade(生态较差 弃用)
     WORK_SPACE=/mnt/d/Code/see
     cd ${WORK_SPACE}/src
     sudo apt-get install libtool
@@ -123,17 +123,29 @@
     sudo apt-get install ninja
     cd blade-build && ./install
 
-3. 配置bashprofile
+2.1 安装Bazel
+    WORK_SPACE=/mnt/d/Code/see
+    cd ${WORK_SPACE}/src/bazel
+    wget https://github.strcpy.cn/bazelbuild/bazel/releases/download/0.27.1/bazel-0.27.1-installer-linux-x86_64.sh
+    bash bazel-0.27.1-installer-linux-x86_64.sh
+
+3. 配置bashprofile/bashrc/profile
     C_INCLUDE_PATH
     CPLUS_INCLUDE_PATH
     LIBRARY_PATH
     LD_LIBRARY_PATH
+    PATH
 
-4. 配置protobuf && RPC
-    cd ${WORK_SPACE}/src/thirdparty
-    cd protobuf && ./autogen.sh && ./configure && make -j 8
-    cd grpc && cmake . && git submodule update --init
+4. 配置protobuf && RPC (不需要执行)
+    ```
+        cd ${WORK_SPACE}/src/thirdparty/download
+        cd grpc && git submodule update --init
+        cmake . && make -j 8
+        export DESTDIR=./bin && make install
+    ```
+
 5. 其他
     git config --global core.autocrlf false
+    github下载代理 github.strcpy.cn
 
 ```
