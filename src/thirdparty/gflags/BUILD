@@ -1,7 +1,6 @@
-cc_library(
+cc_import(
     name = "gflags",
-    srcs = ["lib64/libgflags.a"],
     hdrs = ["gflags.h"],
-    linkopts = ["-pthread"],
+    static_library = "lib64/libgflags.a",
     visibility = ["//visibility:public"],
 )

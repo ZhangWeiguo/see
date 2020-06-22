@@ -1,7 +1,6 @@
-cc_library(
+cc_import(
     name = "glog",
-    srcs = ["lib64/libglog.a"],
     hdrs = ["logging.h"],
-    linkopts = ["-pthread"],
+    static_library = "lib64/libglog.a",
     visibility = ["//visibility:public"],
 )

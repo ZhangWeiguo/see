@@ -1,18 +1,8 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 local_repository(
-  name = "com_google_protobuf",
-  path = "thirdparty/grpc/third_party/protobuf",
-)
-
-local_repository(
   name = "rules_cc",
   path = "bazel/rules_cc",
-)
-
-local_repository(
-  name = "rules_proto",
-  path = "bazel/rules_proto",
 )
 
 local_repository(
@@ -21,13 +11,18 @@ local_repository(
 )
 
 local_repository(
-  name = "bazel_skylib",
-  path = "bazel/bazel_skylib",
+  name = "rules_proto",
+  path = "bazel/rules_proto",
 )
 
 local_repository(
-  name = "com_github_grpc_grpc",
-  path = "thirdparty/grpc",
+  name = "bazel_skylib",
+  path = "bazel/bazel-skylib",
+)
+
+local_repository(
+  name = "rules_python",
+  path = "bazel/rules_python",
 )
 
 local_repository(
@@ -35,17 +30,43 @@ local_repository(
   path = "bazel/rules_apple",
 )
 
-load("@rules_cc//cc:repositories.bzl", "rules_cc_dependencies")
-rules_cc_dependencies()
+local_repository(
+  name = "build_bazel_rules_swift",
+  path = "bazel/rules_swift",
+)
 
-load("@rules_java//java:repositories.bzl", "rules_java_dependencies", "rules_java_toolchains")
-rules_java_dependencies()
-rules_java_toolchains()
+new_local_repository(
+  name = "remote_java_tools_linux",
+  path = "bazel/remote_java_tools_linux",
+  build_file = "bazel/remote_java_tools_linux/BUILD",
+)
 
-load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
-rules_proto_dependencies()
-rules_proto_toolchains()
+new_local_repository(
+  name = "remotejdk11_linux",
+  path = "bazel/remotejdk11_linux",
+  build_file = "bazel/remotejdk11_linux/BUILD.bazel",
+)
 
-load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
-bazel_skylib_workspace()
+new_local_repository(
+  name = "gtest",
+  path = "thirdparty/gtest",
+  build_file = "thirdparty/gtest/BUILD.bazel",
+)
+
+new_local_repository(
+  name = "com_google_protobuf",
+  path = "thirdparty/grpc/third_party/protobuf",
+  build_file = "thirdparty/grpc/third_party/protobuf/BUILD",
+)
+
+new_local_repository(
+  name = "com_github_grpc_grpc",
+  path = "thirdparty/grpc",
+  build_file = "thirdparty/grpc/BUILD",
+)
+
+load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
+grpc_deps()
+load("@upb//bazel:workspace_deps.bzl", "upb_deps")
+upb_deps()
 
