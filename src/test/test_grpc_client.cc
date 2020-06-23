@@ -2,7 +2,7 @@
 #include <string>
 #include "grpc/grpc.h"
 #include "grpc++/grpc++.h"
-#include "grpc/channel.h"
+#include "grpc++/channel.h"
 
 #include "test/proto/helloworld.pb.h"
 #include "test/proto/helloworld.grpc.pb.h"
@@ -17,10 +17,10 @@ public:
     HelloRequest request;
     request.set_message(message);
     HelloReply response;
-	  if (stub_->SayHello(&context, &request, &response))
+	  if (stub_->SayHello(&context, request, &response).ok()) {
 			std::cout << "succ request = " << request.message() << ", response = " << response.message() << std::endl;
 		} else {
-      std::cout << "failed!"
+      std::cout << "failed!";
     }
 	}
 private:
