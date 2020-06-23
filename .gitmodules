@@ -1,0 +1,30 @@
+[submodule "src/thirdparty/grpc"]
+	path = src/thirdparty/grpc
+	url = https://github.com/grpc/grpc
+[submodule "src/thirdparty/gtest"]
+	path = src/thirdparty/gtest
+	url = https://github.com/google/googletest
+[submodule "src/bazel/bazel"]
+	path = src/bazel/bazel
+	url = https://github.com/bazelbuild/bazel.git
+[submodule "src/bazel/bazel-skylib"]
+	path = src/bazel/bazel-skylib
+	url = https://github.com/bazelbuild/bazel-skylib.git
+[submodule "src/bazel/rules_python"]
+	path = src/bazel/rules_python
+	url = https://github.com/bazelbuild/rules_python.git
+[submodule "src/bazel/rules_cc"]
+	path = src/bazel/rules_cc
+	url = https://github.com/bazelbuild/rules_cc.git
+[submodule "src/bazel/rules_java"]
+	path = src/bazel/rules_java
+	url = https://github.com/bazelbuild/rules_java.git
+[submodule "src/bazel/rules_proto"]
+	path = src/bazel/rules_proto
+	url = https://github.com/bazelbuild/rules_proto.git
+[submodule "src/bazel/rules_apple"]
+	path = src/bazel/rules_apple
+	url = https://github.com/bazelbuild/rules_apple.git
+[submodule "src/bazel/rules_swift"]
+	path = src/bazel/rules_swift
+	url = https://github.com/bazelbuild/rules_swift.git
