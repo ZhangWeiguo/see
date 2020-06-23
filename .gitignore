@@ -1,0 +1,4 @@
+src/bazel-testlogs
+src/bazel-src
+src/bazel-out
+src/bazel-bin
