@@ -48,6 +48,12 @@ new_local_repository(
 )
 
 new_local_repository(
+  name = "com_google_abls",
+  path = "bazel/com_google_abls",
+  build_file = "bazel/com_google_abls/absl/BUILD.bazel",
+)
+
+new_local_repository(
   name = "gtest",
   path = "thirdparty/gtest",
   build_file = "thirdparty/gtest/BUILD.bazel",
