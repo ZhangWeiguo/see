@@ -117,8 +117,9 @@
 
 1. 下载该仓库
     ```
-    cd ${WORK_SPACE}
     git clone git@github.com:ZhangWeiguo/see.git
+    cd see && git submodule update --init
+    cd src/thirdparty/grpc && git submodule update --init
     ```
 
 2. 编译环境

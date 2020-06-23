@@ -30,8 +30,17 @@ cc_test(
 )
 
 cc_binary(
-  name = "test_proto",
-  srcs = ["test_proto.cc"],
+  name = "test_grpc_server",
+  srcs = ["test_grpc_server.cc"],
+  deps = [
+      "//test/proto:test_proto",
+      "@com_github_grpc_grpc//:grpc++",
+    ]
+)
+
+cc_binary(
+  name = "test_grpc_client",
+  srcs = ["test_grpc_client.cc"],
   deps = [
       "//test/proto:test_proto",
       "@com_github_grpc_grpc//:grpc++",
