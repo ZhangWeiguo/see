@@ -1,6 +1,14 @@
+.vscode/
+bin/
+dat/
 src/bazel-testlogs
 src/bazel-src
 src/bazel-out
 src/bazel-bin
-src/bazel/remotejdk11_linux
-src/bazel/remote_java_tools_linux
+src/bazel/remotejdk11_linux/
+src/bazel/remote_java_tools_linux/
+src/bazel/*sh
+src/bazel/trunk/
+src/bazel/embedded_tools/
+src/test/practise/
+src/thirdparty/download/
