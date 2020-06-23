@@ -2,3 +2,5 @@ src/bazel-testlogs
 src/bazel-src
 src/bazel-out
 src/bazel-bin
+src/bazel/remotejdk11_linux
+src/bazel/remote_java_tools_linux
