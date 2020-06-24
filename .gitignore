@@ -1,6 +1,7 @@
 .vscode/
 bin/
 dat/
+doc/
 src/bazel-testlogs
 src/bazel-src
 src/bazel-out
@@ -12,3 +13,5 @@ src/bazel/trunk/
 src/bazel/embedded_tools/
 src/test/practise/
 src/thirdparty/download/
+src/thirdparty/include/
+src/thirdparty/lib/

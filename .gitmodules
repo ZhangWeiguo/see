@@ -1,8 +1,5 @@
-[submodule "src/thirdparty/grpc"]
-	path = src/thirdparty/grpc
-	url = https://github.com/grpc/grpc
-[submodule "src/thirdparty/gtest"]
-	path = src/thirdparty/gtest
+[submodule "src/bazel/gtest"]
+	path = src/bazel/gtest
 	url = https://github.com/google/googletest
 [submodule "src/bazel/bazel"]
 	path = src/bazel/bazel
@@ -28,3 +25,6 @@
 [submodule "src/bazel/rules_swift"]
 	path = src/bazel/rules_swift
 	url = https://github.com/bazelbuild/rules_swift.git
+[submodule "src/bazel/grpc"]
+	path = src/bazel/grpc
+	url = https://github.com/google/grpc

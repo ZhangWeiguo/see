@@ -119,7 +119,7 @@
     ```
     git clone git@github.com:ZhangWeiguo/see.git
     cd see && git submodule update --init
-    cd src/thirdparty/grpc && git submodule update --init
+    cd src/bazel/grpc && git submodule update --init
     ```
 
 2. 编译环境
@@ -151,7 +151,7 @@
         ${WORK_SPACE}/src/thirdparty
         ${WORK_SPACE}/src/thirdparty/gtest/googletest/include
         ${WORK_SPACE}/src/thirdparty/grpc/include
-        ${WORK_SPACE}/src/thirdparty/grpc/third_party
+        ${WORK_SPACE}/src/thirdparty/grpc/third_party/protobuf/src 
 
     LIBRARY_PATH
     LD_LIBRARY_PATH

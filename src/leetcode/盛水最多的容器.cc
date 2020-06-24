@@ -9,7 +9,7 @@ int maxArea(vector<int> &height) {
     max_area = max(max_area, tmp_area);
     if (begin - end == 1) break;
     else {
-      if (min(height[begin], height[end - 1]) > min(height[begin + 1], height[end])) {
+      if (height[begin] > height[end]) {
         end--;
       } else {
         begin++;

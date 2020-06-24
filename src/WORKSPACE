@@ -56,7 +56,7 @@ new_local_repository(
 new_local_repository(
   name = "gtest",
   path = "thirdparty/gtest",
-  build_file = "thirdparty/gtest/BUILD.bazel",
+  build_file = "bazel/gtest/BUILD.bazel",
 )
 
 new_local_repository(
