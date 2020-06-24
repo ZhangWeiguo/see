@@ -55,20 +55,20 @@ new_local_repository(
 
 new_local_repository(
   name = "gtest",
-  path = "thirdparty/gtest",
+  path = "bazel/gtest",
   build_file = "bazel/gtest/BUILD.bazel",
 )
 
 new_local_repository(
   name = "com_google_protobuf",
-  path = "thirdparty/grpc/third_party/protobuf",
-  build_file = "thirdparty/grpc/third_party/protobuf/BUILD",
+  path = "bazel/grpc/third_party/protobuf",
+  build_file = "bazel/grpc/third_party/protobuf/BUILD",
 )
 
 new_local_repository(
   name = "com_github_grpc_grpc",
-  path = "thirdparty/grpc",
-  build_file = "thirdparty/grpc/BUILD",
+  path = "bazel/grpc",
+  build_file = "bazel/grpc/BUILD",
 )
 
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")

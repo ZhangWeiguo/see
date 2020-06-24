@@ -15,8 +15,7 @@ cc_test(
   name = "test_test1",
   srcs = ["test_test1.cc"],
   deps = [
-      "@gtest//:gtest_main",
-      "@gtest//:gtest",
+      "//thirdparty:test",
     ]
 )
 
@@ -24,8 +23,7 @@ cc_test(
   name = "test_test2",
   srcs = ["test_test2.cc"],
   deps = [
-      "@gtest//:gtest_main",
-      "@gtest//:gtest",
+      "//thirdparty:test",
     ]
 )
 

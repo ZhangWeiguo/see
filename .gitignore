@@ -14,4 +14,4 @@ src/bazel/embedded_tools/
 src/test/practise/
 src/thirdparty/download/
 src/thirdparty/include/
-src/thirdparty/lib/
+src/thirdparty/lib64/

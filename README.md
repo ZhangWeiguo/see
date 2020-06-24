@@ -149,13 +149,12 @@
     CPLUS_INCLUDE_PATH
         ${WORK_SPACE}/src
         ${WORK_SPACE}/src/thirdparty
-        ${WORK_SPACE}/src/thirdparty/gtest/googletest/include
-        ${WORK_SPACE}/src/thirdparty/grpc/include
-        ${WORK_SPACE}/src/thirdparty/grpc/third_party/protobuf/src 
 
     LIBRARY_PATH
     LD_LIBRARY_PATH
     PATH
+        PROTO_PATH=$WORK_SPACE/src/thirdparty/download/grpc/third_party/protobuf
+        JAVA_HOME=/home/zhangweiguo/local/jdk-11.0.7
     ```
 
 4. 配置protobuf && RPC (不需要执行)
