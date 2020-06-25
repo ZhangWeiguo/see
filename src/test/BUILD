@@ -32,6 +32,7 @@ cc_binary(
   srcs = ["test_grpc_server.cc"],
   deps = [
       "//test/proto:test_proto",
+      "//thirdparty:common",
       "@com_github_grpc_grpc//:grpc++",
     ]
 )
@@ -41,6 +42,7 @@ cc_binary(
   srcs = ["test_grpc_client.cc"],
   deps = [
       "//test/proto:test_proto",
+      "//thirdparty:common",
       "@com_github_grpc_grpc//:grpc++",
     ]
 )
